@@ -208,4 +208,4 @@ Understanding the Superset Points of View
 
 docker compose -f docker-compose-non-dev.yml up
 
-docker build . -t manishmlv50/dingg:0.0.2
+docker build . -t manishmlv50/dingg:0.0.3
