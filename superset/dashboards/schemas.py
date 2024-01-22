@@ -261,6 +261,13 @@ class DashboardDatasetSchema(Schema):
         if security_manager.is_guest_user():
             del serialized["owners"]
             del serialized["database"]
+            del serialized["select_star"]
+            del serialized["sql"]
+            del serialized["edit_url"]
+            del serialized["perm"]
+            del serialized["schema"]
+            del serialized["table_name"]
+            del serialized["name"]
         return serialized
 
 
