@@ -31,6 +31,7 @@ logging.getLogger("flask_appbuilder.api").setLevel(logging.WARNING)
 logging.getLogger("flask_appbuilder.security.sqla.manager").setLevel(logging.WARNING)
 logging.getLogger("sqlalchemy.engine.Engine").setLevel(logging.WARNING)
 
+SECRET_KEY = "dummy_secret_key_for_test_to_silence_warnings"
 AUTH_USER_REGISTRATION_ROLE = "alpha"
 SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(
     DATA_DIR, "unittests.integration_tests.db"
@@ -60,7 +61,7 @@ if "sqlite" in SQLALCHEMY_DATABASE_URI:
 PRESTO_POLL_INTERVAL = 0.1
 HIVE_POLL_INTERVAL = 0.1
 
-SQL_MAX_ROW = 10000
+SQL_MAX_ROW = 50000
 SQLLAB_CTAS_NO_LIMIT = True  # SQL_MAX_ROW will not take effect for the CTA queries
 FEATURE_FLAGS = {
     **FEATURE_FLAGS,
