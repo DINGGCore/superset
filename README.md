@@ -208,4 +208,13 @@ s
 
 docker compose -f docker-compose-non-dev.yml up
 
+
+
 docker build . -t manishmlv50/dingg:0.0.4
+
+update the target in the following file:
+/docker-compose-non-dev.yml
+
+and update the &superset-image with the target version 
+
+Once the docker is built push the image to the private repo on docker.
