@@ -1347,7 +1347,7 @@ class ChartDataQueryObjectSchema(Schema):
 class ChartDataQueryContextSchema(Schema):
     query_context_factory: QueryContextFactory | None = None
     datasource = fields.Nested(ChartDataDatasourceSchema)
-    # queries = fields.List(fields.Nested(ChartDataQueryObjectSchema))
+    queries = fields.List(fields.Nested(ChartDataQueryObjectSchema))
     custom_cache_timeout = fields.Integer(
         metadata={"description": "Override the default cache timeout"},
         required=False,
