@@ -212,6 +212,9 @@ docker compose -f docker-compose-non-dev.yml up
 
 docker build . -t manishmlv50/dingg:0.0.4
 
+
+docker build . -t patidar596/ss:0.0.2
+
 update the target in the following file:
 /docker-compose-non-dev.yml
 

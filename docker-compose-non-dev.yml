@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-x-superset-image: &superset-image manishmlv50/dingg:0.0.4
+x-superset-image: &superset-image patidar596/ss:0.0.2
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
