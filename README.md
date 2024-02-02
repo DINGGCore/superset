@@ -221,3 +221,5 @@ update the target in the following file:
 and update the &superset-image with the target version 
 
 Once the docker is built push the image to the private repo on docker.
+
+docker buildx build . -t patidar596/ss:0.0.2 --platform=linux/amd64
