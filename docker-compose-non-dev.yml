@@ -50,7 +50,7 @@ services:
     restart: unless-stopped
     ports:
       # - 8088:8088
-      - 80:8088
+      # - 80:8088
       - 443:8088
     depends_on: *superset-depends-on
     volumes: *superset-volumes
