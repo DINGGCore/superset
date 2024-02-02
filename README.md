@@ -206,7 +206,8 @@ Understanding the Superset Points of View
 
 s
 
-docker compose -f docker-compose-non-dev.yml up
+sudo docker compose -f docker-compose-non-dev.yml down
+sudo docker compose -f docker-compose-non-dev.yml up
 
 
 
