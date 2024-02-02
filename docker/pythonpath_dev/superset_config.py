@@ -125,16 +125,16 @@ WTF_CSRF_EXEMPT_LIST = []
 # A CSRF token that expires in 1 year
 WTF_CSRF_TIME_LIMIT = 60 * 60 * 24 * 365
 
-SESSION_COOKIE_SAMESITE = 'Lax'
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SECURE = False
 HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
-ENABLE_CORS = True
-CORS_OPTIONS = {
-  'supports_credentials': True,
-  'allow_headers': ['*'],
-  'resources':['*'],
-  'origins': ['*']
-}
+# ENABLE_CORS = True
+# CORS_OPTIONS = {
+#   'supports_credentials': True,
+#   'allow_headers': ['*'],
+#   'resources':['*'],
+#   'origins': ['*']
+# }
 TALISMAN_ENABLED = False
 #
 # Optionally import superset_config_docker.py (which will have been included on
