@@ -61,6 +61,7 @@ superset fab create-admin \
 echo_step "2" "Complete" "Setting up admin user"
 # Create default roles and permissions
 echo_step "3" "Starting" "Setting up roles and perms"
+# superset native-filters upgrade --all
 superset init
 echo_step "3" "Complete" "Setting up roles and perms"
 
