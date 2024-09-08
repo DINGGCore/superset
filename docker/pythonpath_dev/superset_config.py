@@ -92,7 +92,22 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {
+    "ALERT_REPORTS": True, 
+    "ENABLE_TEMPLATE_PROCESSING": True, 
+    "EMBEDDED_SUPERSET": True,
+    "DASHBOARD_NATIVE_FILTERS": True,
+    "DYNAMIC_PLUGINS": True,
+    "ALERTS_ATTACH_REPORTS": True,
+    "DASHBOARD_RBAC": True,
+    "EMBEDDABLE_CHARTS": True,
+    "LISTVIEWS_DEFAULT_CARD_VIEW": True,
+    "SCHEDULED_QUERIES": True,
+    "SQL_VALIDATORS_BY_ENGINE": True,
+    "DASHBOARD_CROSS_FILTERS": True,
+    "THUMBNAILS": True,
+    "HORIZONTAL_FILTER_BAR": True,
+}
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
@@ -100,6 +115,7 @@ WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
 
+SECRET_KEY = '2N8l/y02JJfAHO2mGV9uRvJ1jUCiW5+W39Wq/2FGs5h4mm6Ve6Wzqv05'
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
