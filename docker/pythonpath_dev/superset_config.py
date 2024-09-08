@@ -108,14 +108,30 @@ FEATURE_FLAGS = {
     "THUMBNAILS": True,
     "HORIZONTAL_FILTER_BAR": True,
 }
+
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
-
 SECRET_KEY = '2N8l/y02JJfAHO2mGV9uRvJ1jUCiW5+W39Wq/2FGs5h4mm6Ve6Wzqv05'
+
+ENABLE_PROXY_FIX = True
+# Flask-WTF flag for CSRF
+WTF_CSRF_ENABLED = False
+# Add endpoints that need to be exempt from CSRF protection
+WTF_CSRF_EXEMPT_LIST = []
+# A CSRF token that expires in 1 year
+WTF_CSRF_TIME_LIMIT = 60 * 60 * 24 * 365
+
+# SESSION_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SECURE = False
+HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+
+
+TALISMAN_ENABLED = False
+
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
