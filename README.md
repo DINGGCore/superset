@@ -203,3 +203,22 @@ Understanding the Superset Points of View
 
 <!-- telemetry/analytics pixel: -->
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=bc1c90cd-bc04-4e11-8c7b-289fb2839492" />
+
+sudo docker compose -f docker-compose-non-dev.yml down
+sudo docker compose -f docker-compose-non-dev.yml up
+
+
+
+docker build . -t manishmlv50/dingg:0.0.4
+
+
+docker build . -t patidar596/ss:0.0.2
+
+update the target in the following file:
+/docker-compose-non-dev.yml
+
+and update the &superset-image with the target version 
+
+Once the docker is built push the image to the private repo on docker.
+
+docker buildx build . -t patidar596/ss:0.0.2 --platform=linux/amd64
